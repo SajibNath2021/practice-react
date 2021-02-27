@@ -1,0 +1,21 @@
+.img-container img{
+    width: 200px;
+}
+.userInfo{
+    display: flex;
+    margin-left: 10%;
+    border: 1px solid gray;
+    padding: 10px;
+    width: 80%;
+
+}
+.info-conatiner{
+   margin :10px;
+}
+.mainButton{
+    background-color: tomato;
+    color: white;
+    height:30px;
+    width: 150px;
+    border-radius: 5px ;
+}
