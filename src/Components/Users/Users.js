@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import './User.css'
 const Users = (props) => {
      
     const {name, email, website,address,img, salary} = props.user;
+    const [isClicked , setIsClicked] = useState(false)
     return (
         <div className= "userInfo">
             <div className="img-container">
@@ -16,7 +17,8 @@ const Users = (props) => {
                  <p>email : {email}</p>
                  <p>City :{address.city}</p>
                  <p>Website :{website}</p>
-                <button className="mainButton" onClick={()=>props.handleButton(props.user)}><FontAwesomeIcon icon={faPlus} /> Add friend</button>
+                <button className="mainButton" disabled={isClicked} onClick={()=>{props.handleButton(props.user) 
+                setIsClicked(true)}}><FontAwesomeIcon icon={faPlus} /> {isClicked ? "✓ Remove" : "Add to Cart"}</button>
        
             </div>
         </div>
